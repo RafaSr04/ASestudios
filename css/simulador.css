@@ -1,0 +1,57 @@
+/* Estilos generales */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* Galería de tatuajes */
+.tattoo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tattoo-gallery img {
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.tattoo-gallery img:hover {
+    transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
+    border-color: #3498db; /* Cambia el borde al pasar el mouse */
+}
+
+/* Contenedor del lienzo y controles */
+.canvas-container {
+    position: relative;
+    margin-top: 20px;
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Lienzo resultante */
+#resultCanvas {
+    width: 100%;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    max-width: 600px;
+}

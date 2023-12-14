@@ -1,0 +1,65 @@
+#admintienda {
+    margin: 1rem auto;
+    width: 90%;
+}
+
+#infoprod {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#contentgrid{
+    margin: 0 auto;
+    width: 80%;
+}
+#btnguardarprd {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    top: 30px;
+    background-color: white;
+}
+
+.columna {
+    display: grid;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-dvpl {
+    border-color: inherit;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-0lax {
+    text-align: center;
+    vertical-align: top
+}

@@ -1,0 +1,33 @@
+.contenido{
+    margin: 0 auto;
+    width: 85%;
+}
+input{
+    color:black !important;
+}
+#grid{
+    position: relative;
+    z-index: 1;
+}
+a{
+    color: black !important;
+    text-decoration: none !important;
+}
+li{
+    text-align: left;
+}
+.jqx-loader-icon{
+    background-image: url("../img/logo.gif") !important;
+    /*background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;*/
+    width: 150px !important;
+    height: 150px !important;
+    position: absolute !important;
+    left:25px !important;
+    top:-25px !important;
+    z-index: 999 !important;
+    /*background-position-y: 50%;*/
+    animation: playX .65s steps(10) infinite, playY 3.25s steps(5) infinite !important;
+    
+}

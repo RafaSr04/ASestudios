@@ -1,0 +1,55 @@
+.titulo{
+    text-align: center;
+    margin: 15px;
+}
+.item{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#recomendaciones{
+padding: 30px;
+}
+#mision{
+    padding: 40px;
+}
+#misionc{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#misionc p{
+    text-align: justify;
+    padding: 10% 10px 10px 10px;
+}
+#visionc{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#visionc p{
+    text-align: justify;
+    grid-column: 1;
+    padding: 14% 10px 10px 10px;
+}
+#imgvisiond{
+    grid-column: 2;
+}
+.misionvison{
+    width: 90% !important;
+}
+
+#carrusel{
+    padding-top: 2px;
+}
+
+#portada{
+    width: 100% !important;
+    height: 450px;
+}
+#preparacionc {
+    text-align: left;
+    text-align: justify;
+
+}
+#simulador{
+    color: #0d6efd !important;
+}

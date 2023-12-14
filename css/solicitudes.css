@@ -1,0 +1,93 @@
+#formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 80%;
+    gap: 25px;
+}
+#crearsolicitud{
+    font-size: 20px;
+    width: fit-content;
+    font-style: italic;
+}
+#crearsolicitud:hover{
+    cursor: pointer;
+}
+.campo{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#btnsolicitar{
+    margin: 1rem auto;
+    width: 10%;
+}
+
+#formulariodiv{
+    display: flex;
+    flex-direction: column;
+    border-style: double;
+    margin-top: 2rem;
+}
+#cerrar{
+    width: 5%;
+    position: relative;
+    float: right;
+}
+#cerrar:hover{
+    cursor: pointer;
+}
+#crearsolicitud{
+margin-top: 20px;
+}
+#grid{
+    margin-top: 20px;
+}
+#header{
+    display: flex;
+    border-style: double;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    justify-content: space-between;
+}
+#infocita{
+    border-style: double;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.close{
+    width: 45px;
+}
+.enctatuadores{
+    border-style: double;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.pform{
+    font-size: 25px;
+    padding-left: 45px;
+}
+.close:hover{
+cursor: pointer;
+}
+.imagencont{
+    width: 25%;
+}
+.contenedor{
+    margin: 0 auto;
+    width: 95%;
+}
+.enctatuadores{
+    width: 100% !important;
+}
+button{
+    margin-top: 45px;
+    background-color: white;
+    margin: 1rem auto;
+    width: 20%;
+}
+#gridadmin{
+    margin-top: 5rem;
+}

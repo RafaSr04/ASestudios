@@ -1,0 +1,46 @@
+#formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+    top: 50px;
+    position: relative;
+    background-color: white;
+}
+input{
+width: 25%;
+margin: 0 auto;
+padding: 5px 5px 5px 5px;
+}
+p{
+    align-items: left;
+    margin: 0 auto;
+}
+img{
+    width: 25%;
+}
+.contp{
+    margin: 0 auto;
+    width: 25%;
+    align-items:left;
+}
+#btniniciar{
+    margin: 0 auto;
+    width: 25%;
+    background-color: black;
+    color: white;
+    border-color: #a5a5a5ff;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+#formlogin{
+    display: grid;
+    width: 100%;
+}
+label{
+    width: 25%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
