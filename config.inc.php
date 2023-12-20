@@ -14,7 +14,7 @@ define("COOKIE_TIME", strtotime('+3 month'));
 
 if(!defined("DB_USER")) define("DB_USER", "root");
 if(!defined("PASSWORD")) define("PASSWORD", "");
-if(!defined("DATABASE")) define("DATABASE", "ASestudio");
+if(!defined("DATABASE")) define("DATABASE", "asestudio");
 if(!defined("ruta_js")) define("ruta_js", "js/base");
 if(!defined("extencion_js")) define("extencion_js", ".js");
 if(!defined("entorno")) define("entorno", "local");
