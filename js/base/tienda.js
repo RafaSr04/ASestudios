@@ -1,3 +1,4 @@
+var productos = [];
 $(document).ready(function () {
     
     peticion("tienda", "listadotienda", "").done(function(response){
@@ -5,8 +6,8 @@ $(document).ready(function () {
             var codigo = response["code"];
             var mensaje = response["data"].mensaje;
             if(codigo == "OK"){
-                var datos = response["data"];
-                $(".container-items").empty().html(armar_html(datos));
+                productos = response["data"];
+                $(".container-items").empty().html(armar_html(productos));
                 
             }else{
                 
@@ -45,6 +46,7 @@ $(document).ready(function () {
     
     productsList.addEventListener('click', e => {
         if (e.target.classList.contains('btn-add-cart')) {
+            var cantidad = 1;
             const product = e.target.parentElement;
             const infoProduct = {
                 quantity: 1,
@@ -52,14 +54,13 @@ $(document).ready(function () {
                 price: product.querySelector('p').textContent,
                 stock: product.querySelector('h3').textContent
             };
-            console.log(infoProduct);
-    
+            text = infoProduct.stock.replace("Stock: ", "");
             const exits = allProducts.some(
                 product => product.title === infoProduct.title
-            );
-    
-            if (exits) {
-                const products = allProducts.map(product => {
+                );
+                if( parseInt(text) > 0){
+                if (exits) {
+                    const products = allProducts.map(product => {
                     if (product.title === infoProduct.title) {
                         product.quantity++;
                         return product;
@@ -68,10 +69,12 @@ $(document).ready(function () {
                     }
                 });
                 allProducts = [...products];
+                product.querySelector('h3').textContent = "Stock: "+(parseInt(text-1));
             } else {
+                product.querySelector('h3').textContent = "Stock: "+(parseInt(text-1));
                 allProducts = [...allProducts, infoProduct];
-            }
-    
+            }   
+        }                     
             showHTML();
         }
     });
@@ -80,12 +83,13 @@ $(document).ready(function () {
         if (e.target.classList.contains('icon-close')) {
             const product = e.target.parentElement;
             const title = product.querySelector('p').textContent;
-    
+            const cantidad = product.querySelector('span').textContent;
+            var stock=$(".stock[producto="+title+"]").text();
+            var stockf=stock.replace("Stock: ", "");
+            $(".stock[producto="+title+"]").text("Stock: " + (parseInt(stockf)+parseInt(cantidad)));
             allProducts = allProducts.filter(
                 product => product.title !== title
-            );
-    
-            console.log(allProducts);
+                );
     
             showHTML();
         }
@@ -148,7 +152,6 @@ $(document).ready(function () {
                 '<input type="hidden" name="no_recurring" value="1" />'+
                 '<input type="hidden" name="currency_code" value="MXN" />'+
                 '<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donar con el botón PayPal" />'+
-                '<img alt="" border="0" src="https://www.paypal.com/es_MX/i/scr/pixel.gif" width="1" height="1" />'+
                ' </form>   '    +                      
         '</div>';
         });
@@ -171,7 +174,7 @@ function armar_html(datos){
                 '<div class="info-product">'+
                 '<h2>'+value.descripcion+'</h2>'+
                 '<p class="price">$'+value.precio_unitario+'</p>'+
-                '<h3 class="stock">Stock: '+value.cantidad+'</h3>'+
+                '<h3 class="stock" producto="'+value.descripcion+'">Stock: '+value.cantidad+'</h3>'+
                 '<button class="btn-add-cart">Añadir al carrito</button>'+
                 '</div>'+
                 '</div>';
