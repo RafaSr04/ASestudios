@@ -25,23 +25,30 @@
                 if(isset($params["password"]) && $params["password"] != "") 
                 $password = $this->cleanQuery($params["password"]);
                 $pass = $this->encrypt_decrypt("encrypt",$password);
-                $qry_listado="INSERT INTO master_usuarios
-                (usuario_user,
-                usuario_password,
-                usuario_rol_id,
-                usuario_activo)
-                VALUES
-                ('$correo','$pass','2','1');";
-                try {
-                    $res=$this->query($qry_listado);
-                    if($res){
-                    }else{
-                        $codigo = "ERR";
-                        $elementos = 'Sin elementos';
-                    }
-                }catch (Exception $e) {
+                $select = "SELECT * FROM master_usuarios where usuario_user = '$correo'";
+                $res = $this->query($select);
+                if($res->num_rows > 0){
                     $codigo = "ERR";
-                    $elementos = "Error busqueda";
+                    $elementos = 'Ya hay un usuario con ese correo';
+                }else{
+                    $qry_listado="INSERT INTO master_usuarios
+                    (usuario_user,
+                    usuario_password,
+                    usuario_rol_id,
+                    usuario_activo)
+                    VALUES
+                    ('$correo','$pass','2','1');";
+                    try {
+                        $res=$this->query($qry_listado);
+                        if($res){
+                        }else{
+                            $codigo = "ERR";
+                            $elementos = 'Sin elementos';
+                        }
+                    }catch (Exception $e) {
+                        $codigo = "ERR";
+                        $elementos = "Error busqueda";
+                    }
                 }
                 return array(0 => $codigo, 1 => $elementos);
         

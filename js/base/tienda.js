@@ -46,12 +46,13 @@ $(document).ready(function () {
     productsList.addEventListener('click', e => {
         if (e.target.classList.contains('btn-add-cart')) {
             const product = e.target.parentElement;
-    
             const infoProduct = {
                 quantity: 1,
                 title: product.querySelector('h2').textContent,
                 price: product.querySelector('p').textContent,
+                stock: product.querySelector('h3').textContent
             };
+            console.log(infoProduct);
     
             const exits = allProducts.some(
                 product => product.title === infoProduct.title
@@ -170,6 +171,7 @@ function armar_html(datos){
                 '<div class="info-product">'+
                 '<h2>'+value.descripcion+'</h2>'+
                 '<p class="price">$'+value.precio_unitario+'</p>'+
+                '<h3 class="stock">Stock: '+value.cantidad+'</h3>'+
                 '<button class="btn-add-cart">Añadir al carrito</button>'+
                 '</div>'+
                 '</div>';
