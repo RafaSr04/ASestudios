@@ -1,7 +1,7 @@
 <?php
 if(!defined("MY_SMARTY")) define("MY_SMARTY", "smarty/");
 if(!defined("PROYECTO")) define("PROYECTO", "ASestudio");
-if(!defined("ruta_relativa")) define("ruta_relativa", "http://localhost/upiicsa/ASestudio/");
+if(!defined("ruta_relativa")) define("ruta_relativa", "3.143.236.75/ASestudio/");
 if(!defined("ruta_absoluta")) define("ruta_absoluta", dirname(__FILE__)."/");
 if(!defined("inc")) define("inc", ruta_absoluta."inc/");
 
