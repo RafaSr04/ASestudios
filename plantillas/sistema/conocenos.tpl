@@ -54,7 +54,7 @@
             <div class="tarjeta">
                 <div class="card">
                     <div class="face front">
-                        <img src="img/isaac.jpg" alt="">
+                        <img src="img/Isaac.jpg" alt="">
                         <h3>Isaac</h3>
                     </div>
                     <div class="face back">
@@ -75,7 +75,7 @@
             <div class="tarjeta">
                 <div class="card derecha">
                     <div class="face front">
-                        <img src="img/juan.jpg" alt="">
+                        <img src="img/Juan.jpg" alt="">
                         <h3>Juan Carlos</h3>
                     </div>
                     <div class="face back">
